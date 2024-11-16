@@ -2,13 +2,12 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TdeeService } from '../services/tdee.service';
-import { CommonModule } from '@angular/common';
 
 @Component({
   
   selector: 'app-tdee',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule],
   templateUrl: './tdee.component.html',
   styleUrls: ['./tdee.component.css']
 })
@@ -22,12 +21,8 @@ export class TdeeComponent {
 
   constructor(private router: Router, private tdeeService: TdeeService) {} // Khai báo Router trong constructor
 
-  checkInputValidity(): boolean {
-    return this.age !== null && this.height !== null && this.weight !== null && this.activityLevel !== null && this.gender && this.goal;
-  }
-
   calculate() {
-    if (this.age !== null && this.height !== null  && this.weight !== null  && this.activityLevel !== null  && this.gender && this.goal) {
+    if (this.age && this.height && this.weight && this.activityLevel && this.gender) {
       let BMR: number;
       if (this.gender === 'Nam') {
         BMR = 10 * this.weight + 6.25 * this.height - 5 * this.age + 5;

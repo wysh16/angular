@@ -119,20 +119,20 @@ export class KqTdeeComponent implements OnInit{
         days: this.days,
       };
   
-      this.mealService.createMealPlan(mealPlanRequest).subscribe(
-        (data: any) => {
-          console.log('Meal Plan:', data);
-          // Điều hướng đến trang thực đơn hoặc xử lý kết quả
-          this.router.navigate(['/meal-planner']);
-        },
-        (error) => {
-          console.error('Error creating meal plan:', error);
-        }
-      );
-    }
+    //   this.mealService.createMealPlan(mealPlanRequest).subscribe(
+    //     (data: any) => {
+    //       console.log('Meal Plan:', data);
+    //       // Điều hướng đến trang thực đơn hoặc xử lý kết quả
+    //       this.router.navigate(['/meal-planner']);
+    //     },
+    //     (error) => {
+    //       console.error('Error creating meal plan:', error);
+    //     }
+    //   );
+    // }
 
 
 
   }
-
+}
   

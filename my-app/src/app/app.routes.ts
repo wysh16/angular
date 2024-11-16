@@ -4,7 +4,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { CartComponent } from './cart/cart.component';
 import { TdeeComponent } from './tdee/tdee.component';
 import { KqTdeeComponent } from './kq-tdee/kq-tdee.component';
-import { MealPlannerComponent } from './meal-planner/meal-planner.component';
+
 
 export const routes: Routes = [
     // {path: '', redirectTo: '', pathMatch:'full'},
@@ -14,7 +14,7 @@ export const routes: Routes = [
     { path: 'cart', component: CartComponent },
     { path: 'tdee', component: TdeeComponent },
     { path: 'result', component: KqTdeeComponent },
-    { path: 'meal-planner', component: MealPlannerComponent }
+    
 
 
 ];
