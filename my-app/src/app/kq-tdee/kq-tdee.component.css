@@ -1,0 +1,123 @@
+.container{
+    text-align: center;
+    color: #3BB77E;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    width: 60%;
+}
+
+.yellow-text{
+    color: #FDD96B;;
+}
+
+
+h3{
+    color: black;
+    margin: 20px;
+}
+
+.goal-selected{
+    color: #3BB77E;
+    
+}
+
+
+
+.content-container{
+    border: 1px solid #ddd;
+    padding: 10px;
+    padding-left: 20px;
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.content-container h3{
+    text-align: center;
+}
+
+
+.tags-input-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    width: 50%;
+  }
+  
+  .tags-input-container .tag {
+    display: flex;
+    align-items: center;
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin: 5px 5px 5px 0;
+  }
+  
+  .tags-input-container .tag .remove-tag {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
+  .tags-input-container input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    min-width: 120px;
+    flex: 1;
+  }
+  
+
+.ingredient-container{
+    display: flex;
+    /* gap: 10px; */
+}
+
+
+
+  .dropdown-list {
+    position: absolute;
+    margin-top: 20px;
+    left: 0;
+    width: 29%;
+    z-index: 1000;
+    background: white;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    margin-left: 597px;
+  }
+  
+  .dropdown-list li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+
+  .thucdon-button{
+    margin: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #3BB77E;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    
+  }
+  
+  .button-container {
+    margin-top: 10px; 
+    display: flex;
+    justify-content: center; 
+  }
+  
+ 
+  
+  

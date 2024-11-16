@@ -1,0 +1,44 @@
+<h3>Công cụ tính chỉ số BMR và TDEE</h3>
+<div>
+    <p>Tuổi <br>
+        <input type="number" [(ngModel)]="age" placeholder="Nhập tuổi của bạn">
+    </p>
+    
+    <p>Giới tính <br>
+        <select [(ngModel)]="gender">
+            <option value="" disabled selected>Chọn giới tính của bạn</option>
+            <option value="Nam">Nam</option>
+            <option value="Nữ">Nữ</option>
+        </select>
+    </p>
+    
+    <p>Chiều cao <br>
+        <input type="number" [(ngModel)]="height" placeholder="Nhập chiều cao của bạn tính bằng cm">
+    </p>
+    
+    <p>Cân nặng <br>
+        <input type="number" [(ngModel)]="weight" placeholder="Nhập cân nặng của bạn tính bằng kg">
+    </p>
+    
+    <p>Mức độ vận động <br>
+        <select [(ngModel)]="activityLevel">
+            <option value="" disabled selected>Chọn mức độ vận động của bạn</option>
+            <option value="1.2">Vận động ít/Không vận động</option>
+            <option value="1.375">Vận động nhẹ</option>
+            <option value="1.55">Vận động vừa</option>
+            <option value="1.725">Vận động nhiều</option>
+            <option value="1.9">Vận động cực nhiều</option>
+        </select>
+    </p>
+    
+    <p>Mục tiêu <br>
+        <select [(ngModel)]="goal">
+            <option value="" disabled selected>Chọn mục tiêu của bạn</option>
+            <option value="Giảm cân">Giảm cân</option>
+            <option value="Giữ cân">Giữ cân</option>
+            <option value="Tăng cân">Tăng cân</option>
+        </select>
+    </p>
+    
+    <button (click)="calculate()">KẾT QUẢ</button>
+</div>

@@ -1,0 +1,80 @@
+<div class="container">
+  <h3>Kết quả tính chỉ số BMR và TDEE</h3>
+  <p>
+    CHỈ SỐ BMR CỦA BẠN <br />
+    <span class="yellow-text">{{ BMR }} calo/ngày</span>
+  </p>
+  <p>
+    CHỈ SỐ TDEE CỦA BẠN <br />
+    <span class="yellow-text">{{ TDEE }} calo/ngày</span>
+  </p>
+  <p>
+    LƯỢNG CALO BẠN CẦN ĐỂ
+    <span class="goal-selected">{{
+      goal === "Giảm cân"
+        ? "GIẢM CÂN"
+        : goal === "Tăng cân"
+        ? "TĂNG CÂN"
+        : "GIỮ CÂN"
+    }}</span>
+    <br />
+    <span class="yellow-text">{{ dailyCalories }} calo/ngày</span>
+  </p>
+</div>
+<br>
+<div class="thucdon">
+  
+  <div class="content-container">
+    <h3>Bạn có muốn xây dựng thực đơn?</h3>
+    <p>
+      Thực đơn trong
+      <select [(ngModel)]="days">
+        <option value="1">1 ngày</option>
+        <option value="7">7 ngày</option>
+        <option value="14">14 ngày</option>
+      </select>
+    </p>
+    
+    <div class="ingredient-container">
+      <div>
+        <p>Nguyên liệu bạn không muốn sử dụng</p>
+      </div>
+      <div class="tags-input-container">
+        <!-- Hiển thị các tags đã chọn -->
+  
+        <span class="tag" *ngFor="let tag of selectedTags">
+          {{ tag }}
+          <button class="remove-tag" (click)="removeTag(tag)">×</button>
+        </span>
+  
+        <!-- Ô input để người dùng tiếp tục nhập -->
+        <input
+          type="text"
+          [(ngModel)]="searchTerm"
+          (focus)="showDropdown = true"
+          (input)="filterIngredients()"
+          placeholder="Nhập tên thực phẩm..."
+        />
+  
+        <!-- Dropdown danh sách nguyên liệu đã lọc -->
+        <div class="dropdown-list-container">
+          <ul
+            *ngIf="showDropdown && filteredIngredients.length > 0"
+            class="dropdown-list"
+          >
+            <li
+              *ngFor="let ingredient of filteredIngredients"
+              (click)="selectIngredient(ingredient)"
+            >
+              {{ ingredient }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="button-container">
+    <button class="thucdon-button" (click)="buildMealPlan()">XÂY DỰNG THỰC ĐƠN</button>
+  </div>
+  
+</div>

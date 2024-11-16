@@ -1,0 +1,74 @@
+.topbar {
+    display: flex;
+    background-color: #117554;
+    color: #f9f9f7;
+    justify-content: space-between;
+    padding-top: 15px;
+  }
+  
+  img {
+    margin-left: 10px;
+    margin-right: 6px;
+    margin-top: 2px;
+  }
+  
+  .left-top {
+    display: flex;
+    padding-left: 50px;
+  }
+  .right-top {
+    padding-right: 30px;
+  }
+  .sdt {
+    margin-right: 20px;
+  }
+  
+  .header {
+    display: flex;
+  
+    justify-content: space-between;
+    align-items: center;
+  
+    padding: 10px;
+  }
+  
+  .nav-link {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  .custom-button {
+    background-color: #4caf50; /* Màu xanh lá cây */
+    color: white;
+    border: none;
+    border-radius: 20px; /* Tạo góc bo tròn */
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .custom-button:hover {
+    background-color: #3e8e41;
+  }
+  .icon {
+    display: flex;
+  }
+  .icons {
+    margin-right: 20px;
+    margin-top: 10px;
+  }

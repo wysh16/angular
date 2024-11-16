@@ -1,0 +1,47 @@
+<div class="meal-planner">
+  <h1>Thực Đơn Cho {{ days }} Ngày</h1>
+
+  <!-- Hiển thị trạng thái chờ -->
+  <div *ngIf="loading" class="loading">
+    Đang tải thực đơn...
+  </div>
+
+  <!-- Hiển thị thực đơn -->
+  <div *ngIf="!loading && mealPlan.length > 0">
+    <div *ngFor="let day of mealPlan; let i = index" class="meal-day">
+      <h2>Ngày {{ i + 1 }}</h2>
+
+      <div class="meal">
+        <h3>Bữa sáng</h3>
+        <img [src]="day.breakfast.mealImage" alt="Bữa sáng" class="meal-image" />
+        <p><strong>Món ăn:</strong> {{ day.breakfast.mealName }}</p>
+        <p><strong>Nguyên liệu:</strong> {{ day.breakfast.mealIngredients }}</p>
+        <p><strong>Cách làm:</strong> {{ day.breakfast.mealRecipe }}</p>
+        <p><strong>Calo:</strong> {{ day.breakfast.mealCalories }}</p>
+      </div>
+
+      <div class="meal">
+        <h3>Bữa trưa</h3>
+        <img [src]="day.lunch.mealImage" alt="Bữa trưa" class="meal-image" />
+        <p><strong>Món ăn:</strong> {{ day.lunch.mealName }}</p>
+        <p><strong>Nguyên liệu:</strong> {{ day.lunch.mealIngredients }}</p>
+        <p><strong>Cách làm:</strong> {{ day.lunch.mealRecipe }}</p>
+        <p><strong>Calo:</strong> {{ day.lunch.mealCalories }}</p>
+      </div>
+
+      <div class="meal">
+        <h3>Bữa tối</h3>
+        <img [src]="day.dinner.mealImage" alt="Bữa tối" class="meal-image" />
+        <p><strong>Món ăn:</strong> {{ day.dinner.mealName }}</p>
+        <p><strong>Nguyên liệu:</strong> {{ day.dinner.mealIngredients }}</p>
+        <p><strong>Cách làm:</strong> {{ day.dinner.mealRecipe }}</p>
+        <p><strong>Calo:</strong> {{ day.dinner.mealCalories }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Thông báo nếu không có thực đơn -->
+  <div *ngIf="!loading && mealPlan.length === 0">
+    <p>Không có thực đơn nào để hiển thị.</p>
+  </div>
+</div>
